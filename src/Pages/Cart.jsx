@@ -25,7 +25,7 @@ if( cartItems.length === 0){
         <h3>YOUR WISHLIST IS EMPTY</h3>
         <h6>Add items that you like to your wishlist. Review them anytime and easily move them to the bag.</h6>
        
-       <Link to="/" className='w-100 d-flex align-items-center justify-content-center' style={{height : "50%", textDecoration : "none"}}> <button className='btn btn-outline-primary px-3 fs-2'>Continue Shopping</button></Link>
+       <Link to="/" className='w-100 d-flex align-items-center justify-content-center' style={{height : "50%", textDecoration : "none"}}> <button className='btn btn-outline-dark px-3 fs-2'>Continue Shopping</button></Link>
 
         </div>
       </div>

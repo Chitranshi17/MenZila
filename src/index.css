@@ -1057,7 +1057,7 @@ Link{
   width: 31rem ;
   border-bottom: .2rem solid #000000;
 }
-.inputbox label{
+/* .inputbox label{
   position: relative;
   top: 50%;
   left: .5rem;
@@ -1066,13 +1066,10 @@ Link{
   font-size: 1rem;
   pointer-events: none;
   transition: .5s;
-}
-input:focus ~ label,
-input:valid ~ label{
-  top: -5.1rem;
-}
-.inputbox label{
-  font-size: 1.3rem;
+} */
+
+.inputbox input::placeholder{
+  font-size: 1.4rem;
 }
 .inputbox input{
   width: 100%;
@@ -1723,7 +1720,7 @@ input:valid ~ label{
   /* Profile Page */
   /* Login Page  */
   .container-login{
-    height: auto;
+    /* height: auto; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1747,9 +1744,9 @@ input:valid ~ label{
 
   /* Sign-up Page */
 
-  .signupContainer{
-    height: 100vh;
-  }
+  /* .signupContainer{
+    height: ;
+  } */
   
   .signupform{
     width: 90%;
@@ -1824,9 +1821,7 @@ input:valid ~ label{
 
 
 @media (max-width : 500px) {
-  html{
-    font-size: 30%;
-  }
+
   .card{
     width: 49%;
   }
@@ -1834,19 +1829,17 @@ input:valid ~ label{
 }
 
 @media (max-width : 480px){
-  html{
-    font-size: 30%;
-  }
+
   .formLogin{
-  height: 70vh;
+  height: 100vh;
   }
   .form-box{
     width: 90%;
-    height: 60vh;
+    height: 80vh;
   }
   .form-value{
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1865,6 +1858,9 @@ input:valid ~ label{
   .inputbox{
     width: 100%;
   }
+  .inputbox input::placeholder{
+    color: black;
+  }
   .cartContent{
     width: 60%;
     height: 90%;
@@ -1875,6 +1871,40 @@ input:valid ~ label{
   }
   .cartContentText button{
     height: 40%;
+  }
+  .signupContainer{
+    width: 100%;
+    height: 100vh;
+  }
+  .signForm{
+    width: 100%;
+    height: 100%;
+  }
+  .signupform{
+    width: 90%;
+    height: 75%;
+  }
+  .signUp-Form{
+    width: 100%;
+    height: 100%;
+  }
+  .signUp-Form form{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  .inputbox input::placeholder{
+    font-size: 2rem;
+  }
+  .inputbox i{
+    font-size: 2rem;
+  }
+  .signUp-Form form p{
+    font-size: 1.8rem;
   }
 }
 

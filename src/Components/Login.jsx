@@ -55,15 +55,17 @@ const Login = () => {
         <h2>Login</h2>
         <div className="inputbox">
           {/* <MdEmail/> */}
-          <i class="fa-solid fa-lock"></i>
-          <input type="email" required />
-          <label htmlFor="">Email</label>
+          <i class="fa-solid fa-envelope"></i>
+          {/* <input type="email" required />
+          <label htmlFor="">Email</label> */}
+          <input type="text" placeholder="Enter Email Here" />
         </div>
         <div className="inputbox">
           {/* <FaLock/> */}
-          <i class="fa-solid fa-envelope"></i>
-          <input type="password" required/>
-          <label htmlFor="">Password</label>
+          <i class="fa-solid fa-lock"></i>
+          {/* <input type="password" required/>
+          <label htmlFor="">Password</label> */}
+          <input type="password" placeholder="Enter Password Here" />
         </div>
         <div className="forget d-flex align-items-center justify-content-center">
           <label htmlFor=""><input type="checkbox" />Remember me</label>
