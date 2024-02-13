@@ -11,9 +11,9 @@ const Footer = () => {
     <div className="top-footer">
       <div className="left-top-footer d-flex align-items-center justifu-content-around">
        <div className="footer-content">
-     <Link to="/about">
+     {/* <Link to="/about"> */}
      <h5>About</h5>
-     </Link>
+     {/* </Link> */}
         <ul>
           <li>Contact Us</li>
           <li>About Us</li>
