@@ -14,17 +14,17 @@ const Card = ({ product }) => {
       type : "ADD_TO_CART",
       payload : item
     })
-    toast.success('🦄 Wow so easy!', {
-      position: "bottom-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-      });
+    // toast.success('🦄 Wow so easy!', {
+    //   position: "bottom-right",
+    //   autoClose: 1000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    //   theme: "light",
+    //   transition: Bounce,
+    //   });
   }
 
 

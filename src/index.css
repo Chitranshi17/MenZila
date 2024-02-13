@@ -1829,10 +1829,8 @@ Link{
 }
 
 @media (max-width : 480px){
-
- 
 .Item-Product .card{
-  width: 40%;
+  width: 47%;
     height: 40rem;
 }
 .addtocart button {
