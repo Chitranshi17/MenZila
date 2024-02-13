@@ -79,7 +79,7 @@ const Navbar1 = () => {
                 </div>
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a
                 className="nav-link active text-primary"
                 aria-current="page"
@@ -87,7 +87,7 @@ const Navbar1 = () => {
               >
                 <h1 className="navItem">Contact US</h1>
               </a>
-            </li>
+            </li> */}
             {/* <li className="nav-item">
               <a
                 className="nav-link active text-primary"

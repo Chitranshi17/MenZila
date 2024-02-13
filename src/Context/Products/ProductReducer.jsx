@@ -1,3 +1,4 @@
+
 const ProductReducer = (state, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
@@ -17,6 +18,7 @@ const ProductReducer = (state, action) => {
         cartItems : [action.payload , ...state.cartItems],
       }
     case "ADD_TO_CART1":
+   
       return{
         ...state,
         cartItems : [action.payload , ...state.cartItems],
@@ -27,6 +29,9 @@ const ProductReducer = (state, action) => {
         ...state,
         cartItems : state.cartItems.filter(item => item.id !== action.payload)
       }
+
+  
+  
     default:
       return state;
   }

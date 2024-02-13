@@ -50,7 +50,7 @@ body{
   height: 90%;
 }
 .navbar-nav{
-  width: 40%;
+  width: 30%;
   height: 100% ;
   display: flex;
   align-items: center;
@@ -63,10 +63,10 @@ body{
   font-family: 'DM Serif Display', serif;
 }
 
-.nav-link:hover{
+/* .nav-link:hover{ */
   /* text-decoration: underline; */
   /* text-shadow: 0rem 1rem 1rem blue; */
-}
+/* } */
 .navItem{
   color: rgb(34, 31, 31);
   font-weight: 900;
@@ -101,7 +101,7 @@ Link{
   background-color: rgb(251, 251, 251);
   box-shadow: .2rem 0 1rem rgb(112, 109, 109);
   position: absolute;
-  top: 10.8rem;
+  top: 8.8rem;
   right: 28rem;
   display: flex;
   align-items: center;
@@ -294,8 +294,8 @@ Link{
   height: 15rem;
   background-color: white;
   position: absolute;
-  top: 10rem;
-  left: 45rem;
+  top: 9rem;
+  left: 49rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,11 +381,6 @@ Link{
   width: 100%;
   height: 100%;
   border-radius: 50%;
-}
-
-.header-box img:hover{
-  transition: all;
-  transform: scale(120);
 }
 .header-nav-content li a{
   text-decoration: none;
@@ -1050,6 +1045,12 @@ Link{
   text-align: center;
   font-weight: 800;
 }
+.form-value form h2{
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  font-weight: 800;
+}
 .inputbox{
   position: relative;
   margin: 3rem 0;
@@ -1102,6 +1103,8 @@ input:valid ~ label{
 }
 .forget label{
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 .forget label input{
   margin-right: .3re;
@@ -1148,70 +1151,6 @@ input:valid ~ label{
 .registerlogin p a:hover{
   text-decoration: underline;
 }
-
-/* Login Page */
-/* .container{ 
-  width: 80%;
-   height: 75vh;
-  display: flex;
-} */
-/* .container-login{
-  width: 100%;
-  height: 80.8vh;
-  background-color: #7f7fd538;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loginSec{
-  width: 70%;
-  height: 100%;
-  display: flex;
-}
-.left-login{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-.left-login img{
-  width: 70%;
-  height: 70%;
-}
-.right-login{
-  width: 50%;
-  height: 100%;
-  background-color : white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.form-container{
-  width: 95%;
-  height: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.form-container a{
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: .1rem;
-}
-.form-container a:hover{
-  color: #7F7FD5;
-}
-.form{
-  width: 90%;
-  height: 18rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-} */
 
 /* About Page */
 
@@ -1363,31 +1302,6 @@ input:valid ~ label{
   justify-content: center;
   flex-direction: column;
 }
-/* .leftSignup{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-.formContainer{
-  width: 80%;
-  height: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.formSign{
-  width: 90%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-*/
 
 .topSignup{
   width: 70%;
@@ -1424,6 +1338,7 @@ input:valid ~ label{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-block: 2rem;
 }
 .signUp-Form h2{
   font-size: 2rem;
@@ -1760,7 +1675,7 @@ input:valid ~ label{
     left: 40rem;
   }
   .card{
-    width: 48%;
+    width: 45%;
     height: 55rem;
   }
   .addtocart button{
@@ -1833,8 +1748,9 @@ input:valid ~ label{
   /* Sign-up Page */
 
   .signupContainer{
-    height: auto;
+    height: 100vh;
   }
+  
   .signupform{
     width: 90%;
     height: auto;
@@ -1915,6 +1831,51 @@ input:valid ~ label{
     width: 49%;
   }
 
+}
+
+@media (max-width : 480px){
+  html{
+    font-size: 30%;
+  }
+  .formLogin{
+  height: 70vh;
+  }
+  .form-box{
+    width: 90%;
+    height: 60vh;
+  }
+  .form-value{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-value form{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .form-value form h2{
+    font-size: 4rem;
+  }
+  .inputbox{
+    width: 100%;
+  }
+  .cartContent{
+    width: 60%;
+    height: 90%;
+  }
+  .cartContentGif{
+    width: 100%;
+    height: 30%;
+  }
+  .cartContentText button{
+    height: 40%;
+  }
 }
 
 

@@ -65,7 +65,7 @@ const Login = () => {
           <input type="password" required/>
           <label htmlFor="">Password</label>
         </div>
-        <div className="forget">
+        <div className="forget d-flex align-items-center justify-content-center">
           <label htmlFor=""><input type="checkbox" />Remember me</label>
           {/* <a href="#">Forget Password</a> */}
         </div>

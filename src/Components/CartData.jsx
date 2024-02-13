@@ -12,17 +12,17 @@ const CartData = ({cart}) => {
   
   const {dispatch} = useContext(ProductContext);
 
-  const [countValue , setCountValue] = useState(0);
+  const [amount , setAmount] = useState(1);
 
   const increaseValue = () => {
-    setCountValue(countValue + 1);
-    console.log(countValue)
+    setAmount(amount + 1);
+    console.log(amount)
   }
   const decreaseValue = () => {
-    if(countValue>0){
-      setCountValue(countValue - 1);
+    if(amount>0){
+      setAmount(amount - 1);
     }
-    console.log(countValue)
+    console.log(amount)
   }
 
   const handleRemove = (id) => {
@@ -82,7 +82,7 @@ const CartData = ({cart}) => {
                       <span>
                         <button className="incre" onClick={()=>decreaseValue()}><FaMinus/></button>
                         <div className="number">
-                          {countValue}
+                          {amount}
                         </div>
                         <button className="decre" onClick={()=>increaseValue()}><FaPlus/></button>
                       </span>

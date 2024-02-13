@@ -14,13 +14,7 @@ const RightCartI = ({cartItems}) => {
         </div>
         <div className="price-cart-text">
           <h3>
-            Price (2 Items) <span className="float-end">$240</span>
-          </h3>
-          <h3>
-            Discount <span className="float-end"> -$80</span>
-          </h3>
-          <h3>
-            Delivery Charges <span className="float-end">$4.6</span>
+            Product ({cartItems.length}) <span className="float-end">${totalAmount}</span>
           </h3>
         </div>
         <div className="price-cart-total">

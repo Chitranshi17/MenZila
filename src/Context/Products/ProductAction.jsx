@@ -20,3 +20,4 @@ export const fetchMobileDevice = async() => {
     return data;
     // console.log("Data Show on Mobile Devices");
 }
+

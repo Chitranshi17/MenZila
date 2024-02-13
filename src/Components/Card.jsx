@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import ProductContext from "../Context/Products/ProductContext";
 import { toast } from "react-toastify";
@@ -25,9 +25,8 @@ const Card = ({ product }) => {
       theme: "light",
       transition: Bounce,
       });
-  
   }
-  
+
 
 
   return (

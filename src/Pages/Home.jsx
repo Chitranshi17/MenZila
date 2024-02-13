@@ -9,6 +9,8 @@ import ProductContext from '../Context/Products/ProductContext'
 const Home = () => {
   const {cartItems} = useContext(ProductContext);
 
+  
+
   console.log(cartItems)
 
   return (
