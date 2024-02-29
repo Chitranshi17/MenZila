@@ -54,38 +54,38 @@ const ProductReducer = (state, action) => {
       //   })}
 
     case "DECREASE_PRODUCT":
-      // const checkItemIndex = state.cartItems.findIndex((currentItem) => {
-      //   return currentItem.id === action.payload.id;
-      // });
-
-      // return {
-      //   ...state,
-      //   cartItems: state.cartItems.map((currentItem, index) =>
-      //     index === checkItemIndex
-      //       ? {
-      //           ...currentItem,
-      //           itemQuantity:
-      //             currentItem.itemQuantity > 1
-      //               ? currentItem.itemQuantity - 1
-      //               : 1,
-      //         }
-      //       : currentItem
-      //   ),
-      // };
+      const checkItemIndex = state.cartItems.findIndex((currentItem) => {
+        return currentItem.id === action.payload.id;
+      });
 
       return {
         ...state,
-        cartItems: state.cartItems.map((item) => {
-            if (item.id === action.payload.id) {
-                return {
-                    ...item, newPrice: item.price * item.qty
-                }
-            }
-            else {
-                return item
-            }
-        })
-    }
+        cartItems: state.cartItems.map((currentItem, index) =>
+          index === checkItemIndex
+            ? {
+                ...currentItem,
+                itemQuantity:
+                  currentItem.itemQuantity > 1
+                    ? currentItem.itemQuantity - 1
+                    : 1,
+              }
+            : currentItem
+        ),
+      };
+
+    //   return {
+    //     ...state,
+    //     cartItems: state.cartItems.map((item) => {
+    //         if (item.id === action.payload.id) {
+    //             return {
+    //                 ...item, newPrice: item.price * item.qty
+    //             }
+    //         }
+    //         else {
+    //             return item
+    //         }
+    //     })
+    // }
 
     case "REMOVE_FROM_CART":
       return {
