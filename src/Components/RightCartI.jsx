@@ -2,9 +2,14 @@ import React from "react";
 
 const RightCartI = ({cartItems}) => {
 
-  const totalAmount = cartItems.reduce((p,c)=>{
-    return p + c.price;
-  }, 0)
+  // const total= cartItems.reduce((p,c)=>{
+  //   return p + c.price ;
+  // }, 0)
+
+  const total = cartItems.reduce((p,currentItem) =>{
+    return p + (currentItem.price * currentItem.itemQuantity);
+  },0)
+  console.log("Total", total)
 
   return (
     <div className="right-cart">
@@ -14,13 +19,13 @@ const RightCartI = ({cartItems}) => {
         </div>
         <div className="price-cart-text">
           <h3>
-            Product ({cartItems.length}) <span className="float-end">${totalAmount}</span>
+            Product ({cartItems.length}) <span className="float-end">${total}</span>
           </h3>
         </div>
         <div className="price-cart-total">
           <div className="cart-total">
             <h2>
-              Total Amount <span className="float-end">{totalAmount}</span>
+              Total Amount <span className="float-end">{total}</span>
             </h2>
           </div>
         </div>

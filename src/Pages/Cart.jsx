@@ -14,6 +14,8 @@ const Cart = () => {
   
 const {cartItems} = useContext(ProductContext);
 
+
+
 if( cartItems.length === 0){
   return(
     <div className="container w-100  d-flex align-items-center justify-content-center text-primary" style={{width : "100%" , height : "80vh"}}>
@@ -32,9 +34,6 @@ if( cartItems.length === 0){
     </div>
   )
 }
-
-
-
   return (
     <>
     <Header/>

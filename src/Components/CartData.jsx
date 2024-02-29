@@ -9,21 +9,38 @@ import { MdDelete } from "react-icons/md";
 
 const CartData = ({cart}) => {
 
-  
+  const currentItem = cart
+  console.log("currentItem" ,currentItem)
   const {dispatch} = useContext(ProductContext);
 
-  const [amount , setAmount] = useState(1);
+  const increaseQuantity = (currentItem) => {
+    dispatch({
+     type: "INCREASE_PRODUCT",
+     payload: currentItem
+    })
+    console.log(increase)
+   }
+ 
+   const decreaseQuantity = (currentItem) => {
+      dispatch({
+       type: "DECREASE_PRODUCT",
+       payload: currentItem
+      })
+      console.log(decrease)
+      console.log(currentItem)
+   }
+  
 
-  const increaseValue = () => {
-    setAmount(amount + 1);
-    console.log(amount)
-  }
-  const decreaseValue = () => {
-    if(amount>0){
-      setAmount(amount - 1);
-    }
-    console.log(amount)
-  }
+  // const increaseValue = () => {
+  //   setAmount(amount + 1);
+  //   console.log(amount)
+  // }
+  // const decreaseValue = () => {
+  //   if(amount>0){
+  //     setAmount(amount - 1);
+  //   }
+  //   console.log(amount)
+  // }
 
   const handleRemove = (id) => {
     dispatch({
@@ -51,20 +68,21 @@ const CartData = ({cart}) => {
               <h6>{items.price}</h6>
             </div>
           </div> */}
-          <div className="cartData">
+         
+            <div className="cartData">
             <div className="leftCardData">
               <div className="cardDataImg">
-                <img src={cart.image} alt="" />
+                <img src={currentItem.image} alt="" />
               </div>
             </div>
             <div className="rightCardData">
               <div className="remove">
-                <button className="btn btn-danger text-light float-end rounded-0" onClick={()=>handleRemove(cart.id)}><MdDelete/></button>
+                <button className="btn btn-danger text-light float-end rounded-0" onClick={()=>handleRemove(currentItem.id)}><MdDelete/></button>
               </div>
               <div className="rightCardText">
                 <div className="cardDataName">
-                  <h3>{cart.title}</h3>
-                  <h6>{cart.category}</h6>
+                  <h3>{currentItem.title}</h3>
+                  <h6>{currentItem.category}</h6>
                 </div>
                 <div className="cardSize">
                   <span>
@@ -80,11 +98,12 @@ const CartData = ({cart}) => {
 
                     <div className="quantity">
                       <span>
-                        <button className="incre" onClick={()=>decreaseValue()}><FaMinus/></button>
+                        <button className="incre"  onClick={() => decreaseQuantity(currentItem)}  ><FaMinus/></button>
                         <div className="number">
-                          {amount}
+                          {/* {amount} */}
+                          {currentItem.itemQuantity}
                         </div>
-                        <button className="decre" onClick={()=>increaseValue()}><FaPlus/></button>
+                        <button className="decre" onClick={() =>increaseQuantity(currentItem)} ><FaPlus/></button>
                       </span>
                     </div>
                   </span>
@@ -101,6 +120,7 @@ const CartData = ({cart}) => {
               </div>
             </div>
           </div>
+          
     </div>
   )
 }
